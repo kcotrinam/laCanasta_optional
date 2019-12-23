@@ -6,6 +6,8 @@
 
      padding: .5rem;
      position: fixed;
+     top: 0;
+     left: 0;
 
      @include from(lg) {
           display: grid;

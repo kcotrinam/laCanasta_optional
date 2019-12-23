@@ -1,0 +1,75 @@
+.banner {
+     background: black;
+     width: 100%;
+     height: 400px;
+     display: grid;
+     grid-template-columns: repeat(6, 1fr);
+     grid-template-rows: repeat(3, 1fr);
+
+     position: relative;
+
+     &__image {
+          background: yellow;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+
+          & img {
+               display: block;
+               position: absolute;
+               width: 100%;
+               height: 80%;
+               position: absolute;
+          }
+     }
+
+     &__button {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          grid-column: 2;
+          grid-row: 1;
+
+
+
+
+          & a {
+               color: var(--text-color);
+               background: $button-bg;
+
+               display: block;
+               text-align: center;
+               border-radius: .8rem;
+
+               font-size: calc(var(--s-font-size) / 1.2);
+               width: 12em;
+               line-height: 1.5em;
+               padding: 0 .5em;
+
+               &:hover {
+                    background: darken($button-bg, 8);
+               }
+
+               &:active {
+                    transform: scale(1.2);
+               }
+
+          }
+
+
+     }
+
+     &__title {
+          position: relative;
+          grid-column: 3/4;
+          grid-row: 3;
+
+          & h1 {
+               font-size: var(--h3-font-size);
+               text-align: center;
+               color: var(--text-color);
+          }
+     }
+}
