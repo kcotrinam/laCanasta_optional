@@ -5,3 +5,48 @@
 body {
      margin-top: $header-height;
 }
+
+.container {
+     margin-top: 3em;
+     display: grid;
+     grid-template-columns: repeat(6, 1fr);
+     grid-template-rows: repeat(8.1fr);
+     grid-gap: 15px;
+
+
+
+     &__lacanasta,
+     &__academia,
+     &__escuela,
+     &__museo {
+          grid-column: 1 / span 6;
+
+
+          @include from(lg) {
+               background: red;
+               grid-column: 2 / span 4;
+
+          }
+     }
+
+
+     &__left,
+     &__advertisement {
+          display: none;
+
+          @include from(lg) {
+               display: block;
+               background: green;
+               grid-column: 1;
+               grid-row: 1 / span 8;
+          }
+     }
+
+     &__advertisement {
+
+          @include from(lg) {
+               grid-column: 6;
+               grid-row: 1 / span 8;
+          }
+     }
+}
