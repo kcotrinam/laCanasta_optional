@@ -1,0 +1,45 @@
+.banner__button {
+     position: relative;
+     display: flex;
+     justify-content: flex-start;
+     align-items: flex-end;
+
+     grid-column: 2/ span 3;
+     grid-row: 1;
+
+     padding-bottom: 1em;
+
+     @include from(lg) {
+          padding-bottom: 0;
+     }
+
+     & a {
+
+          color: var(--text-color);
+          background: $button-bg;
+          display: block;
+
+          text-align: center;
+          text-transform: uppercase;
+          border-radius: .8rem;
+
+          font-size: var(--small-font-size-button);
+          line-height: 3em;
+          padding: 0 2em;
+
+          @include from(lg) {
+               font-size: .9em;
+          }
+
+          &:hover {
+               background: darken($button-bg, 8);
+          }
+
+          &:active {
+               transform: scale(1.2);
+          }
+
+     }
+
+
+}

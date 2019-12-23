@@ -7,14 +7,13 @@ $red-border-color: hsl(0, 100%, 20%);
 
 $path: "../img/";
 
-$breakpoints: (
-  s: 0,
+$breakpoints: (s: 0,
   //todos los tamaños
-    m: 40em,
+  m: 40em,
   // 640px
-    lg: 64em,
+  lg: 64em,
   // 1024px
-    xl: 75em //1200px
+  xl: 75em //1200px
 );
 
 // Variables de apilamiento (Z-index)

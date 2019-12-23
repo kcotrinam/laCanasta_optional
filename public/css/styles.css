@@ -102,15 +102,17 @@ body {
   display: inline-block; }
 
 .banner {
+  position: relative;
   background: black;
   width: 100%;
   height: 400px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  position: relative; }
+  grid-template-rows: repeat(3, 1fr); }
+  @media screen and (min-width: 64em) {
+    .banner {
+      height: 500px; } }
   .banner__image {
-    background: yellow;
     top: 0;
     left: 0;
     width: 100%;
@@ -121,32 +123,43 @@ body {
       width: 100%;
       height: 80%;
       position: absolute; }
-  .banner__button {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    grid-column: 2;
-    grid-row: 1; }
-    .banner__button a {
-      color: var(--text-color);
-      background: #ff8000;
-      display: block;
-      text-align: center;
-      border-radius: .8rem;
-      font-size: calc(var(--s-font-size) / 1.2);
-      width: 12em;
-      line-height: 1.5em;
-      padding: 0 .5em; }
-      .banner__button a:hover {
-        background: #d66c00; }
-      .banner__button a:active {
-        transform: scale(1.2); }
   .banner__title {
     position: relative;
-    grid-column: 3/4;
+    grid-column: 2/ span 4;
     grid-row: 3; }
     .banner__title h1 {
       font-size: var(--h3-font-size);
       text-align: center;
       color: var(--text-color); }
+      @media screen and (min-width: 64em) {
+        .banner__title h1 {
+          font-size: var(--h1-font-size); } }
+
+.banner__button {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  grid-column: 2/ span 3;
+  grid-row: 1;
+  padding-bottom: 1em; }
+  @media screen and (min-width: 64em) {
+    .banner__button {
+      padding-bottom: 0; } }
+  .banner__button a {
+    color: var(--text-color);
+    background: #ff8000;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: .8rem;
+    font-size: var(--small-font-size-button);
+    line-height: 3em;
+    padding: 0 2em; }
+    @media screen and (min-width: 64em) {
+      .banner__button a {
+        font-size: .9em; } }
+    .banner__button a:hover {
+      background: #d66c00; }
+    .banner__button a:active {
+      transform: scale(1.2); }
