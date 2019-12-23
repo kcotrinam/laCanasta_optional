@@ -1,0 +1,62 @@
+.header {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     width: 100%;
+     background: var(--header-color);
+
+     padding: .5rem;
+     position: fixed;
+
+     @include from(lg) {
+          display: grid;
+          grid-template-columns: 1fr .5fr 1.5fr;
+     }
+
+
+     &__image {
+          grid-column: 2;
+
+          @include from(lg) {
+               grid-column: 1;
+          }
+
+          & img {
+               height: 3.5rem;
+               display: block;
+               margin: 0 auto;
+
+
+               @include from(lg) {
+                    margin-left: 0;
+               }
+          }
+     }
+
+     &__info {
+          display: none;
+
+          @include from(lg) {
+               display: flex;
+               justify-content: flex-end;
+               align-items: flex-start;
+               grid-column: 3;
+               padding: .2em;
+          }
+
+          &-phone,
+          &-address,
+          &-email {
+               font-size: .9rem;
+               padding: .5em;
+               margin: .2em;
+          }
+
+     }
+
+
+}
+
+.icon {
+     width: 20px;
+     display: inline-block;
+}
