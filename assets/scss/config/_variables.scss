@@ -1,0 +1,49 @@
+$header-height: 4.5rem;
+$logo-width: 3.5rem;
+$button-bg: #ff8000;
+
+$blue-border-color: hsl(240, 50%, 30%);
+$red-border-color: hsl(0, 100%, 20%);
+
+$path: "../img/";
+
+$breakpoints: (
+  s: 0,
+  //todos los tamaños
+    m: 40em,
+  // 640px
+    lg: 64em,
+  // 1024px
+    xl: 75em //1200px
+);
+
+// Variables de apilamiento (Z-index)
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+:root {
+  --h1-font-size: 2.5rem;
+  --h2-font-size: 1.75rem;
+  --h3-font-size: 1.5rem;
+  --h4-font-size: 1.2rem;
+
+  --s-font-size: 1rem;
+  --m-font-size: 1.35rem;
+  --l-font-size: 2rem;
+  --xl-font-size: 2.5rem;
+
+  --small-font-size-button: 0.6rem;
+}
+
+//PALETA DE COLORES
+:root {
+  --header-color: hsl(50, 50%, 98%);
+  --text-color: hsl(100, 100%, 100%);
+  --red-bg: hsl(360, 75%, 10%);
+  --blue-bg: hsl(243, 100%, 10%);
+}
