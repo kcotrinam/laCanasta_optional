@@ -5,9 +5,7 @@
      align-items: center;
      padding: 0.5em 0.5em;
 
-     @include from(l) {
-          width: 60%;
-     }
+
 }
 
 .button {
@@ -39,13 +37,7 @@
           transform: scale(0.95);
      }
 
-     @include from(m) {
-          font-size: var(--m-font-size);
-     }
 
-     @include from(lg) {
-          padding: 0.7em 2.5em;
-     }
 
 
 }

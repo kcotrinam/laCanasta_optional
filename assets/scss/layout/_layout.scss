@@ -4,6 +4,7 @@
 
 body {
      margin-top: $header-height;
+     background: black;
 }
 
 .container {
@@ -12,6 +13,12 @@ body {
      grid-template-columns: repeat(6, 1fr);
      grid-template-rows: repeat(8.1fr);
      grid-gap: 15px;
+
+     @include from(lg) {
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: repeat(4.1fr);
+          grid-gap: 15px;
+     }
 
 
 
@@ -23,8 +30,7 @@ body {
 
 
           @include from(lg) {
-               background: red;
-               grid-column: 2 / span 4;
+               grid-column: 4 / span 6;
 
           }
      }
@@ -36,17 +42,19 @@ body {
 
           @include from(lg) {
                display: block;
-               background: green;
-               grid-column: 1;
-               grid-row: 1 / span 8;
+               background-color: lightslategrey;
+               grid-column: 1 / span 3;
+               grid-row: 1 / span 4;
+
+               margin: 0 15px;
           }
      }
 
      &__advertisement {
 
           @include from(lg) {
-               grid-column: 6;
-               grid-row: 1 / span 8;
+               grid-column: 10 / span 3;
+               grid-row: 1 / span 4;
           }
      }
 }

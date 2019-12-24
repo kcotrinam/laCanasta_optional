@@ -3,6 +3,10 @@
 
      &__lacanasta,
      &__academia {
+          padding: 1.5em;
+          position: relative;
+          color: var(--text-color);
+
           background: var(--blue-bg);
           border-top: 15px solid $blue-border-color;
           border-bottom: 15px solid $blue-border-color;
@@ -12,6 +16,10 @@
 
      &__escuela,
      &__museo {
+          padding: 1.5em;
+          position: relative;
+          color: var(--text-color);
+
           background: var(--red-bg);
           border-top: 15px solid $red-border-color;
           border-bottom: 15px solid $red-border-color;
